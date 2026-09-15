@@ -1,1 +1,1 @@
-# GoLearning (Урок 5)
+# GoLearning (Урок 5), Эщкере!
