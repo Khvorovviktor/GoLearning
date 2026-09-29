@@ -29,7 +29,7 @@ func main() {
 	fmt.Scanln(&quantityFragile)
 
 	baseRate := (weight*BaseRate)*(1+FragileFee*quantityFragile) + (distance * DistanceRate)
-	result := baseRate + TaxRate
+	result := (1 + TaxRate) * baseRate
 
 	fmt.Println("--Отчет о доставке--")
 	fmt.Printf("Имя отправителя: %s\n", userName)
