@@ -53,8 +53,8 @@ func main() {
 
 	count := 0
 
-	for number != 0 {
-		number /= 10
+	for numberr != 0 {
+		numberr /= 10
 		count++
 	}
 
