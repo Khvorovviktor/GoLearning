@@ -22,8 +22,8 @@ func main() {
 		fmt.Scan(&name)
 
 		if name == "done" {
-			return
 			fmt.Println("Расчёт завершен.")
+			return
 		}
 
 		fmt.Println("Введите мощность прибора/девайса в ватт (W): ")
@@ -35,7 +35,7 @@ func main() {
 		fmt.Println("Введите есть ли у прибора/девайса ночной режим (true/false): ")
 		fmt.Scan(&NightmareRegime)
 
-		expdtOfkWpH := (power * timeOfWork) / 1000
+		expdtOfkWpH := float64((power * timeOfWork)) / 1000.00
 		StockCosts := float64(expdtOfkWpH) * BaseTariff
 
 		if NightmareRegime == true {
@@ -44,8 +44,8 @@ func main() {
 			fmt.Println("В вашем девайсе нету ночного режима, поэтому скидка не прибавляется.")
 		}
 
-		if expdtOfkWpH >= 10 {
-			StockCosts = StockCosts + HighLoadTax
+		if expdtOfkWpH > 10 {
+			StockCosts = (1 + HighLoadTax) * StockCosts
 		}
 
 		switch {
